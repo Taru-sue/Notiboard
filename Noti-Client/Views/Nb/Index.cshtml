@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Noti_Client.Models.Board>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@if (TempData["errorMessage"] != null)
+{
+    <div id="errorMessage" class="alert alert-danger">
+        @TempData["errorMessage"]
+    </div>
+
+    <script>
+        // Set a timeout to hide the error message after 5 seconds (adjust the duration as needed)
+        setTimeout(function () {
+            document.getElementById("errorMessage").style.display = "none";
+        }, 5000); // 5000 milliseconds = 5 seconds
+    </script>
+}
+<br />
+<h1 class="text-center">Notificaion Board </h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card" style="background-color: rgba(255, 255, 255, 0.3);">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Description)</h5>
+                    <p class="card-text">
+                        <strong>Posted:</strong> @Html.DisplayFor(modelItem => item.Posted)<br />
+                        <strong>Group:</strong> @Html.DisplayFor(modelItem => item.Group.Name)
+                    </p>
+                    <div class="text-right">
+                        <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-primary"><i class="fa-solid fa-pen-to-square  custom-icon"></i></a>
+                        <a asp-action="Details" asp-route-id="@item.ID" class="btn btn-info"> <i class="fa-solid fa-circle-info  custom-icon "></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger"><i class="fa-solid fa-delete-left  custom-icon"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

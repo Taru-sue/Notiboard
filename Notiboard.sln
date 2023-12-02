@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notiboard-Api", "Notiboard-Api\Notiboard-Api.csproj", "{3A0A0CF7-1755-46AF-891A-BEB2482243DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noti-Client", "Noti-Client\Noti-Client.csproj", "{47C24C48-E150-41E0-9D64-DBBD7A951D0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A0A0CF7-1755-46AF-891A-BEB2482243DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0A0CF7-1755-46AF-891A-BEB2482243DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0A0CF7-1755-46AF-891A-BEB2482243DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0A0CF7-1755-46AF-891A-BEB2482243DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C24C48-E150-41E0-9D64-DBBD7A951D0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C24C48-E150-41E0-9D64-DBBD7A951D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C24C48-E150-41E0-9D64-DBBD7A951D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C24C48-E150-41E0-9D64-DBBD7A951D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E15E3795-9499-44C2-AEE7-129710003EC9}
+	EndGlobalSection
+EndGlobal

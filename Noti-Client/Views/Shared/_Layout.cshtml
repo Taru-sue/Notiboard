@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Noti_Client</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Noti_Client.styles.css" asp-append-version="true" />
+     <script src="https://kit.fontawesome.com/f6e385978b.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="~/css/custom-styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <h1>
+                        <a href="index.html">
+                            <span class="fa-solid fa-code" aria-hidden="true"></span>
+                            <span>Amber Heart Notification Dash</span>
+                        </a>
+                    </h1>
+                </li>
+                <li><a asp-controller="nb" asp-action="Index">View All</a></li>
+                <li><a asp-controller="Nb" asp-action="ByGroup" asp-route-groupId="5">Amber</a></li>
+                <li><a asp-controller="Nb" asp-action="ByGroup" asp-route-groupId="8">Cisco</a></li>
+                <li><a asp-controller="Nb" asp-action="ByGroup" asp-route-groupId="6">USIF</a></li>
+                <li><a asp-controller="Nb" asp-action="ByGroup" asp-route-groupId="9">Food/Beverage</a></li>
+                <li>
+                    <a href="">
+                        <span class="fab fa-github" aria-hidden="true"></span>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+            <canvas id="canvas"></canvas>
+            <script src="script.js"></script>
+        </nav>
+        <div class="gradient"></div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3 ">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
